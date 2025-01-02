@@ -11,7 +11,7 @@
 </head>
 <body class="font-body bg-gray-100">
     <div class="bg-white">
-        <nav class="px-10 mx-auto py-2 md:flex md:justify-between md:items-center">
+        <nav class="px-10 mx-auto py-2 md:flex md:h-16 md:justify-between md:items-center">
             <div class="flex justify-between items-center">
                 <h1><img class="h-12" src="{% static 'img/logo.png'%}"></h1>
                 <button id="menu-btn" class="h-6 w-6 md:hidden">
@@ -21,49 +21,49 @@
                 </button>
             </div>
               
-            <div id="links" class="hidden flex-col space-y-3 items-center  md:flex md:flex-row md:space-x-10">
+            <div id="links" class="hidden space-y-2 flex-col  justify-center items-center md:flex md:space-y-0 lg:space-y-0 md:items-center  md:flex-row md:space-x-10">
                 <a href="" class="text-xl hover:text-pink-500">Home</a>
                 <a href="" class="text-xl hover:text-pink-500">Services</a>
                 <a href="" class="text-xl hover:text-pink-500">Clients</a>
                 <a href="" class="text-xl hover:text-pink-500">News</a>
                 <a href="" class="text-xl hover:text-pink-500">Contact</a>
-                <button class="p-1 btn hover:bg-pink-500">Sign Up</button>
+                <button class=" bg-blue-500 text-white rounded-full px-5 py-1 hover:bg-pink-500">Sign Up</button>
             </div>
         </nav>
     </div>
     
-    <section class="flex justify-between items-center mx-40 my-20">
-        <div class="w-1/2 space-y-4 font-thin">
-            <h2 class="text-3xl">Multipurpose landing Template</h2>
-            <h1 class="text-6xl font-bold text-primary">Beautifully</h1>
-            <h1 class="text-6xl font-bold text-primary">Simple,code.</h1>
-            <h3 class="text-2xl tracking-wider text-gray-700">lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-            <button class="text-xl bg-pink-500 text-white rounded-full px-8 py-3 hover:bg-blue-500">Learn more</button>
+    <section class="flex flex-wrap justify-between items-center mx-10 md:mx-40 my-10">
+        <div class="w-full md:w-1/2">
+            <img class="h-96 mx-auto" src="{% static 'img/header.png' %}" alt="">
         </div>
-        <div class="w-1/2">
-            <img class="h-96" src="{% static 'img/header.png' %}" alt="">
+        <div class="w-full md:w-1/2 space-y-4 font-thin">
+            <h2 class="text-xl md:text-3xl">Multipurpose landing Template</h2>
+            <h1 class="text-3xl md:text-6xl font-bold text-primary">Beautifully</h1>
+            <h1 class="text-3xl md:text-6xl font-bold text-primary">Simple,code.</h1>
+            <h3 class="text-xl md:text-2xl tracking-wider text-gray-700">lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <button class="text-xl bg-pink-500 text-white rounded-full px-8 py-3 hover:bg-blue-500">Learn more</button>
         </div>
     </section>
 
-    <div class="services flex justify-between items-center mx-40 mt-10 mb-10">
+    <div class="services flex flex-col mx-10 justify-between items-center space-y-2 md:flex-row md:mx-40">
         <div class="flex flex-col items-center space-y-2">
             <img  src="{% static 'img/strategy-1.png' %}" alt="">
-            <h1 class="text-primary text-2xl py-1">Services 1</h1>
+            <h1 class="text-primary text-2xl">Services 1</h1>
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="flex flex-col items-center space-y-2">
             <img src="{% static 'img/strategy-2.png' %}" alt="">
-            <h1 class="text-primary text-2xl py-1">Services 2</h1>
+            <h1 class="text-primary text-2xl">Services 2</h1>
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="flex flex-col items-center space-y-2">
             <img src="{% static 'img/strategy-3.png' %}" alt="">
-            <h1 class="text-primary text-2xl py-1">Services 3</h1>
+            <h1 class="text-primary text-2xl">Services 3</h1>
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="flex flex-col items-center space-y-2">
             <img src="{% static 'img/strategy-4.png' %}" alt="">
-            <h1 class="text-primary text-2xl py-2">Services 4</h1>
+            <h1 class="text-primary text-2xl">Services 4</h1>
             <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </div>
