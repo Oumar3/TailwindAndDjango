@@ -9,21 +9,25 @@
     <title>Document</title>
     {% tailwind_css %}
 </head>
-<body class="font-body">
-    <div class="bg-gray-200 h-16">
-        <nav class="flex justify-between items-center px-40 mx-auto py-2">
-            <h1><img class="h-10" src="{% static 'img/logo.png'%}"></h1>
-            <ul>
-                <li>
-                    <a href="" class="mr-10 text-xl hover:text-pink-500">Home</a>
-                    <a href="" class="mr-10 text-xl hover:text-pink-500">Services</a>
-                    <a href="" class="mr-10 text-xl hover:text-pink-500">Clients</a>
-                    <a href="" class="mr-10 text-xl hover:text-pink-500">News</a>
-                    <a href="" class="mr-10 text-xl hover:text-pink-500">Contact</a>
-                </li>
-            </ul>
-            <div>
-                <button class="btn hover:bg-pink-500">Sign Up</button>
+<body class="font-body bg-gray-100">
+    <div class="bg-white">
+        <nav class="px-10 mx-auto py-2 md:flex md:justify-between md:items-center">
+            <div class="flex justify-between items-center">
+                <h1><img class="h-12" src="{% static 'img/logo.png'%}"></h1>
+                <button id="menu-btn" class="h-6 w-6 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>
+                </button>
+            </div>
+              
+            <div id="links" class="hidden flex-col space-y-3 items-center  md:flex md:flex-row md:space-x-10">
+                <a href="" class="text-xl hover:text-pink-500">Home</a>
+                <a href="" class="text-xl hover:text-pink-500">Services</a>
+                <a href="" class="text-xl hover:text-pink-500">Clients</a>
+                <a href="" class="text-xl hover:text-pink-500">News</a>
+                <a href="" class="text-xl hover:text-pink-500">Contact</a>
+                <button class="p-1 btn hover:bg-pink-500">Sign Up</button>
             </div>
         </nav>
     </div>
@@ -41,6 +45,39 @@
         </div>
     </section>
 
-    <script src="{% static "js/script.js" %}"></script>
+    <div class="services flex justify-between items-center mx-40 mt-10 mb-10">
+        <div class="flex flex-col items-center space-y-2">
+            <img  src="{% static 'img/strategy-1.png' %}" alt="">
+            <h1 class="text-primary text-2xl py-1">Services 1</h1>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <img src="{% static 'img/strategy-2.png' %}" alt="">
+            <h1 class="text-primary text-2xl py-1">Services 2</h1>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <img src="{% static 'img/strategy-3.png' %}" alt="">
+            <h1 class="text-primary text-2xl py-1">Services 3</h1>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <img src="{% static 'img/strategy-4.png' %}" alt="">
+            <h1 class="text-primary text-2xl py-2">Services 4</h1>
+            <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const links = document.getElementById("links");
+
+        menuBtn.addEventListener("click", () => {
+            links.classList.toggle("hidden");
+            links.classList.toggle("flex");
+        });
+
+    </script>
 </body>
 </html>
